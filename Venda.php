@@ -24,11 +24,11 @@ require_once 'Produto.php';
         
         // aqui eu deveria fazer uma serie de verificacoes, mas foram todas poupadas por conta das exceptions que eu criei na classe anterior
         // por conta disso o codigo ficou mais enxuto
-        if($p->quantidade >= $v) {
+        if($this->quantidade >= $v) {
            //logo depois de verificar se existia a quantidade de produtos suficiente para serem vendidas, e feito o calculo do desconto e a atualizacao desses valores do produto
            //e por consequencia a autorizacao da venda
-           $this->produto->quantidade -= $this->quantidade_vendas;
-           $this->produto->preco -= $this->descontos;
+           $this->quantidade -= $this->quantidade_vendas;
+           $this->preco -= $this->descontos;
             echo "<br> Venda permitida <br>";
         
         } else {

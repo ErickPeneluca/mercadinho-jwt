@@ -15,6 +15,10 @@ require_once 'Produto.php';
     public function setVenda($p, $d,$v) {
         //logo abaixo eu faco com que a classe consiga fazer o recebimento dos dados passados pelo Produto e receba seus novos valores dos atributos atraves do set.
         $this->produto = $p;
+        $this->nome = $p->nome;
+        $this->preco = $p->preco;
+        $this->quantidade = $p->quantidade;
+
         $this->descontos = $d;
         $this->quantidade_vendas = $v;
         
@@ -33,6 +37,6 @@ require_once 'Produto.php';
     }
     // listar a venda, com o nome do produto, o preco com desconto e a quantidade atualizada do estoque logo depois de vendido.
     public function getVenda() {
-        echo "<br> Produto: {$this->produto->nome} <br>Preço atualizado: {$this->produto->preco} <br>Quantidade atualizada: {$this->produto->quantidade}<br>";
+        echo "<br> Produto: {$this->nome} <br>Preço atualizado: {$this->preco} <br>Quantidade atualizada: {$this->quantidade}<br>";
     }
 }
